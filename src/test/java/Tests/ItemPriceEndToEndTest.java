@@ -18,9 +18,9 @@ public class ItemPriceEndToEndTest
 		 WebDriver driver=null;
 		 try
 		 {
-			 //NOTE: This should be set properly otherwise tests will be failed
-			 //Setting chrome driver path
-			 System.setProperty("webdriver.chrome.driver","C:\\IGT\\Softwares\\chromedriver_win32\\chromedriver.exe");
+			 String chromeDriverPath = System.getProperty("user.dir")+"\\chromedriver.exe";			 
+			 //Setting chrome driver path			 
+			 System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 			 driver = new ChromeDriver();
 			 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS) ;
 			 //Opening the amazon URL
